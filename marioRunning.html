@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Mario</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        body{
+            width:100%;
+            height: 100vh;
+            background-image: url("images/mario-bg.png");
+            background-size: 100% 100%;
+        }
+        .mario{
+            scale: .5;
+            position: absolute;
+            left: -250px;
+            bottom: -25px;
+            animation: run 3s linear infinite;
+            overflow: hidden;
+        }
+        @keyframes run {
+            0%{
+                translate: 0%;
+            }
+            50%{
+                translate: 50vw;
+            }
+            100%{
+                translate: 110vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="mario" src="images/mario-run.gif" alt="mario running">
+</body>
+</html>
